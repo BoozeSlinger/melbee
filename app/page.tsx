@@ -59,7 +59,6 @@ export default function Home() {
               />
               {/* Overlays for depth matching #1A1305 */}
               <div className="absolute inset-x-0 bottom-0 h-96 bg-linear-to-t from-rich-black via-rich-black/60 to-transparent" />
-              <div className="absolute inset-0 bg-linear-to-r from-rich-black via-rich-black/20 to-transparent lg:hidden" />
             </div>
           </div>
         </div>

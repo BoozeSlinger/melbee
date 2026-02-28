@@ -69,10 +69,10 @@ export function Navbar() {
           <Link href="/" className="md:hidden">
                 <div className="relative h-14 w-28 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center scale-75">
                   <Image 
-                    src="/images/logo.png" 
+                    src="/images/logo.jpg" 
                     alt="Melbee Logo" 
                     fill
-                    className="object-contain"
+                    className="object-contain filter invert brightness-[0.7] sepia-[1] saturate-[3] hue-rotate-[10deg] mix-blend-screen"
                     priority
                   />
                 </div>
@@ -105,10 +105,10 @@ export function Navbar() {
                 
                 <div className="relative h-20 w-32 md:h-24 md:w-36 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center">
                   <Image 
-                    src="/images/logo.png" 
+                    src="/images/logo.jpg" 
                     alt="Melbee Logo" 
                     fill
-                    className="object-contain"
+                    className="object-contain filter invert brightness-[0.7] sepia-[1] saturate-[3] hue-rotate-[10deg] mix-blend-screen"
                     priority
                   />
                 </div>
