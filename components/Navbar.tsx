@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X, Instagram } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -66,11 +67,13 @@ export function Navbar() {
           
           {/* Mobile Logo */}
           <Link href="/" className="md:hidden">
-                <div className="relative h-14 w-28 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center bg-rich-black overflow-hidden scale-75">
-                  <img 
-                    src="/images/logo.jpg" 
+                <div className="relative h-14 w-28 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center scale-75">
+                  <Image 
+                    src="/images/logo.png" 
                     alt="Melbee Logo" 
-                    className="w-full h-full object-contain filter invert brightness-[0.7] sepia-[1] saturate-[3] hue-rotate-[10deg] mix-blend-screen"
+                    fill
+                    className="object-contain"
+                    priority
                   />
                 </div>
           </Link>
@@ -100,11 +103,13 @@ export function Navbar() {
                    <div className="w-full h-full rounded-full border border-dashed border-gold/30 animate-[spin_25s_linear_infinite]" />
                 </div>
                 
-                <div className="relative h-20 w-32 md:h-24 md:w-40 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center bg-rich-black overflow-hidden">
-                  <img 
-                    src="/images/logo.jpg" 
+                <div className="relative h-20 w-32 md:h-24 md:w-36 transition-transform duration-500 group-hover:scale-110 flex items-center justify-center">
+                  <Image 
+                    src="/images/logo.png" 
                     alt="Melbee Logo" 
-                    className="w-full h-full object-contain filter invert brightness-[0.7] sepia-[1] saturate-[3] hue-rotate-[10deg] mix-blend-screen"
+                    fill
+                    className="object-contain"
+                    priority
                   />
                 </div>
               </div>

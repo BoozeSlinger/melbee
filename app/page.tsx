@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { Sparkles, Heart, Clock, Star, MapPin, Instagram, Mail, Phone, ChevronRight } from "lucide-react"
+import Image from "next/image"
+import { Sparkles, Heart, Clock, Star, ChevronRight } from "lucide-react"
 import { StaggerTestimonials } from "@/components/sections/stagger-testimonials"
 import { MasonryGallery } from "@/components/sections/masonry-gallery"
 import { galleryImages } from "@/lib/gallery-data"
 import { FAQSection } from "@/components/sections/faq-section"
-import { Button } from "@/components/ui/Button"
 
 export default function Home() {
   return (
@@ -50,10 +50,12 @@ export default function Home() {
           {/* Right Image - Asymmetric & Bleeding */}
           <div className="relative h-full lg:h-[110vh] lg:-mr-[12vw] xl:-mr-[20vw] overflow-hidden lg:translate-x-12 group/hero">
             <div className="relative h-[550px] lg:h-full w-full grayscale-[0.3] transition-all duration-1000 group-hover/hero:grayscale-0">
-              <img 
+              <Image 
                 src="/images/Hero/editorial-hero-v2.png" 
                 alt="Elite Spray Tan Editorial" 
-                className="w-full h-full object-cover object-right lg:object-center scale-[1.02] transition-transform duration-1000 group-hover/hero:scale-110"
+                fill
+                className="object-cover object-right lg:object-center scale-[1.02] transition-transform duration-1000 md:group-hover/hero:scale-110"
+                priority
               />
               {/* Overlays for depth matching #1A1305 */}
               <div className="absolute inset-x-0 bottom-0 h-96 bg-linear-to-t from-rich-black via-rich-black/60 to-transparent" />
@@ -119,10 +121,11 @@ export default function Home() {
             <div className="relative group">
               <div className="absolute -inset-4 border border-gold/10 transition-all duration-700 group-hover:inset-0" />
               <div className="relative aspect-3/4 overflow-hidden grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700">
-                <img 
+                <Image 
                   src="/images/Hero/melbee-glow-bridal-spray-tan-backless-dress-riverside.png" 
                   alt="Melbee Bronze and Glow Service" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-1000 md:group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-rich-black via-transparent to-transparent opacity-60" />
               </div>
@@ -130,7 +133,7 @@ export default function Home() {
               {/* Floating Badge */}
               <div className="absolute -bottom-10 -right-10 bg-gold text-rich-black p-10 hidden md:block group-hover:scale-110 transition-transform duration-500">
                  <p className="text-[10px] tracking-[0.4em] uppercase font-black mb-1">Book Today</p>
-                 <h4 className="font-serif text-2xl font-bold italic">Riverside's Best</h4>
+                 <h4 className="font-serif text-2xl font-bold italic">Riverside&apos;s Best</h4>
               </div>
             </div>
           </div>
@@ -139,7 +142,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <div className="bg-rich-black/50 py-12 border-y border-gold/10 overflow-hidden">
-        <div className="container-custom mb-20 flex flex-col items-center text-center space-y-4">
+        <div className="container-custom mb-10 flex flex-col items-center text-center space-y-4">
            <span className="font-sans text-[10px] tracking-[0.5em] text-gold uppercase font-black border-b border-gold/20 pb-2">Fake Tans, Real Reviews</span>
            <h2 className="font-luxury text-4xl md:text-6xl lg:text-7xl text-white block tracking-[0.12em] uppercase leading-tight pt-4">What Radiant Women are Saying</h2>
         </div>
@@ -184,8 +187,8 @@ export default function Home() {
                ].map((service, idx) => (
                  <div key={idx} className="group relative py-20 px-8 transition-all duration-700 hover:px-12 overflow-hidden">
                     {/* Hover Reveal Image */}
-                    <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 transition-opacity duration-1000">
-                       <img src={service.img} alt={service.name} className="w-full h-full object-cover grayscale brightness-50" />
+                    <div className="absolute inset-0 z-0 opacity-10 md:opacity-0 md:group-hover:opacity-10 transition-opacity duration-1000">
+                       <Image src={service.img} alt={service.name} fill className="object-cover md:grayscale brightness-50" />
                     </div>
                     
                     <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -243,7 +246,7 @@ export default function Home() {
       {/* Final CTA Redesigned */}
       <section className="py-40 relative overflow-hidden text-center bg-rich-black">
          <div className="absolute inset-0 opacity-20">
-            <img src="/images/Hero/melbee-glow-spray-tan-golden-hour-beach-riverside.png" className="w-full h-full object-cover blur-sm" />
+            <Image src="/images/Hero/melbee-glow-spray-tan-golden-hour-beach-riverside.png" alt="Melbee Glow Backdrop" fill className="object-cover blur-sm" />
          </div>
          <div className="absolute inset-0 bg-rich-black/80" />
          

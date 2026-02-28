@@ -45,8 +45,8 @@ export const StaggerTestimonials: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto py-20 px-4">
-      <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full max-w-5xl mx-auto py-10 px-4">
+      <div className="relative min-h-[250px] py-10 flex items-center justify-center overflow-hidden">
         {/* Massive Background Quote Mark */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
           <span className="font-serif text-[40rem] text-gold opacity-[0.05] leading-none mb-40">“</span>
