@@ -42,10 +42,10 @@ export function MasonryGallery({ images, limit, showLink }: MasonryGalleryProps)
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover transition-all duration-700 md:grayscale md:group-hover/gallery:grayscale md:group-hover/gallery:opacity-50 md:group-hover/card:grayscale-0 md:group-hover/card:opacity-100 md:group-hover/card:scale-105"
+                className="object-cover transition-all duration-700 md:grayscale md:hover:grayscale-0 md:group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-black/0 md:group-hover/card:bg-black/10 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-500" />
             </div>
           </motion.div>
         ))}
